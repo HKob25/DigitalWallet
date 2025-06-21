@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body style="margin-top: 150;">
+        <p style="font-size:100px; margin: 0;" align="center" >LOGIN</p>
+        <div align="center" style="margin: 0;">
+            <input type="email" placeholder="usermail@email.com" style="margin-bottom: 20px;"> <br>
+            <button onclick="signUp()">Sign Up</button>
+            <button onclick="login()">Login</button>
+        </div>
+        <div align="center" style="margin: 0;">
+            <p style="color: red; display: none;" id="message"></p>
+        </div>
+
+        <script>
+            const msg = document.getElementById("message")
+
+            function login() {
+                msg.style.display = "block";
+                msg.innerText = "User Does Not Exist";
+                msg.style.color = "red";
+            }
+
+            function signUp() {
+                msg.style.display = "block";
+                msg.innerText = "Sign Up Successful";
+                msg.style.color = "green";
+            }
+        </script>
+    </body>
+</html>
