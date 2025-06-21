@@ -1,62 +1,26 @@
 <html>
-    <head>
 
+    <head>
+        <title>Hsen's Digital Wallet</title>
+        <link rel="stylesheet" href="LoginPage.css">
     </head>
+
+
     <body style="margin-top: 150;">
-        <p style="font-size:100px; margin: 0;" align="center" >LOGIN</p>
-        <div align="center" style="margin: 0;">
-            <input type="email" id="mail" placeholder="usermail@email.com" style="margin-bottom: 20px;"> <br>
+
+        <p id="loginHeader">LOGIN</p>
+
+        <div id="loginDiv">
+            <input type="email" id="mail" placeholder="usermail@email.com"> <br>
             <button onclick="signUp()">Sign Up</button>
             <button onclick="login()">Login</button>
         </div>
-        <div align="center" style="margin: 0;">
-            <p style="color: red; display: none;" id="message"></p>
+
+        <div id="errorMsg">
+            <p style="display: none;" id="message"></p>
         </div>
-
-        <script>
-            const msg = document.getElementById("message")
-            const mail = document.getElementById("mail")
             
-            function login() {
-                if (mail.checkValidity() && mail.value != "")
-                {
-                    failedLoginMsg();
-                }else
-                {   
-                    invalidEmailMsg();
-                }
-            }
-
-            function signUp() {
-                if (mail.checkValidity() && mail.value != "")
-                {
-                    failedSignUpMsg();
-                }else
-                {   
-                    invalidEmailMsg();
-                }
-            }
-
-            function successMsg(){
-                    msg.style.display = "block";
-                    msg.innerText = "Successful";
-                    msg.style.color = "green";
-            }
-            function failedLoginMsg(){
-                msg.style.display = "block";
-                msg.innerText = "User Does Not Exist";
-                msg.style.color = "red";
-            }
-            function failedSignUpMsg(){
-                msg.style.display = "block";
-                msg.innerText = "User Already Exists";
-                msg.style.color = "red";
-            }
-            function invalidEmailMsg(){
-                msg.style.display = "block";
-                    msg.innerText = "Invalid Email";
-                    msg.style.color = "red";
-            }
-        </script>
     </body>
+
+    <script src="LoginPage.js"></script>
 </html>

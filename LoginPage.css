@@ -1,0 +1,25 @@
+#loginHeader{
+    font-size:100px; 
+    margin: 0;
+    text-align: center;
+}
+
+#loginDiv{
+    text-align: center;
+    margin: 0;
+}
+
+#mail{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+    font-size: 20px;
+}
+
+#errorMsg{
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
