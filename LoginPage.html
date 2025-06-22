@@ -5,16 +5,15 @@
         <link rel="stylesheet" href="LoginPage.css">
     </head>
 
-
     <body style="margin-top: 150;">
 
         <p id="loginHeader">LOGIN</p>
 
-        <div id="loginDiv">
-            <input type="email" id="mail" placeholder="usermail@email.com"> <br>
-            <button onclick="signUp()">Sign Up</button>
-            <button onclick="login()">Login</button>
-        </div>
+        <form id="loginForm" action="LoginPage.php" method="post">
+            <input type="email" id="mail" name="mail" placeholder="usermail@email.com"> <br>
+            <button onclick="signUp()" name="action" value="signup">Sign Up</button>
+            <button onclick="login()"  name="action" value="login">Login</button>
+        </form>
 
         <div id="errorMsg">
             <p style="display: none;" id="message"></p>
